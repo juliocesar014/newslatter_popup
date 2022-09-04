@@ -1,6 +1,8 @@
 const openBtn = document.querySelector('button');
 const closeBtn = document.querySelector('#close');
 const modal = document.querySelector('.modal');
+const form = document.querySelector('form');
+
 
 openBtn.addEventListener('click', openModal);
 
@@ -26,4 +28,16 @@ modal.addEventListener('click', function (e) {
 })
 
 
-// Mensagem de cadastro.
+// Mensagem de cadastro concluido.
+
+form.addEventListener('submit', submitForm);
+
+function submitForm() {
+    const card = document.querySelector('.card');
+    card.innerHTML = "<h1>Cadastro realizado com sucesso, até mais!</h1>";
+    setTimeout(() => {
+        closeModal();
+    }, 3000);
+}
+
+

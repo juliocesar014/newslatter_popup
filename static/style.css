@@ -169,7 +169,7 @@ i {
 }
 
 .close-modal-animation {
-    animation: closeModal 1s linear forwards;
+    animation: closeModal 500ms linear forwards;
 }
 
 /* Keyframes Fechar Modal*/
