@@ -4,7 +4,7 @@
 ### 1- Criação do HTML;
 ### 2- Criação do CSS;
 ### 3- Criação do JS;
-
+### 4- Servidor em Python;
 
 
 
@@ -15,7 +15,5 @@
 #### -> Html - CSS - JavaScript - Python(Flask)
 
 ### Tarefas pendentes:
-### -> Mensagem final de inscrito,
-### -> Favicon, 
-### -> Receber e-mails com Flask-Mail,
-### -> Backend com Python (Flask),
+### -> Remover bug de enviar o email,
+

@@ -27,9 +27,9 @@
             <div class="info">
                 <h2>Se inscreva na Newslatter!</h2>
                 <p>Se inscreva no maior e melhor newsletter sobre criptomoedas de todo Brasil! Acompanhe notícias, variações e todas as novidades de um mercado que está em crescimento absurdo! Assine e não perca nenhuma oportunidade, grátis e rápido.</p>
-                <form action="#">
-                    <input type="email" placeholder="Digite seu e-mail">
-                    <input type="submit" value="ASSINAR" id="submit">
+                <form action='/send' method="POST">
+                    <input type="email" placeholder="Digite seu e-mail" name="email">
+                    <button type="submit" id="btnassinar"> ASSINAR </button>
                 </form>
             </div>
         </div>
