@@ -1,25 +1,21 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from flask_mail import Mail, Message
-from config import email, senha
+
+# colocar senha do email, senha para outros app
 
 app = Flask(__name__)
-app.secret_key = "python2022"
+app.secret_key = "julio"
 
-mail_settings = {
-    "MAIL_SERVER": "smtp.gmail.com",
-    "MAIL_PORT": 465,
-    "MAIL_USE_TLS": False,
-    "MAIL_USE_SSL": True,
-    "MAIL_USERNAME": email,
-    "MAIL_PASSWORD": senha,
-}
-
-app.config.update(mail_settings)
-
+app.config["MAIL_SERVER"] = "smtp.gmail.com"
+app.config["MAIL_PORT"] = 465
+app.config["MAIL_USERNAME"] = "jcprojetosx2@gmail.com"
+app.config["MAIL_PASSWORD"] = "senha"
+app.config["MAIL_USE_TLS"] = False
+app.config["MAIL_USE_SSL"] = True
 mail = Mail(app)
 
 
-class EnviarEmail:
+class Contato:
     def __init__(self, email):
         self.email = email
 
@@ -32,20 +28,26 @@ def index():
 @app.route("/send", methods=["GET", "POST"])
 def send():
     if request.method == "POST":
-        formEnviarEmail = EnviarEmail(request.form["email"])
+        formContato = Contato(request.form["email"])
 
         msg = Message(
-            subject="Cadastro da newslatter",
-            sender=app.config.get("MAIL_USERNAME"),
-            recipients=[app.config.get("MAIL_USERNAME")],
-            body=f"""
-
-            Olá,
-            Me cadaste na newslatter! Meu e-mail é: {formEnviarEmail.email}
-
-            """,
+            "Cadastro na Newslatter",
+            sender="noreply@reply.com",
+            recipients=["jcprojetosx2@gmail.com"],
         )
+
+        msg.body = f"""
+                Olá, quero ser cadastrado(a) na Newslatter,
+                 meu e-mail é: {formContato.email}
+            """
+
         mail.send(msg)
+    return redirect("/sucess")
+
+
+@app.route("/sucess")
+def sucess():
+    return render_template("sucess.html")
 
 
 if __name__ == "__main__":

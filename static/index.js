@@ -28,16 +28,6 @@ modal.addEventListener('click', function (e) {
 })
 
 
-// Mensagem de cadastro concluido.
 
-form.addEventListener('submit', submitForm);
-
-function submitForm() {
-    const card = document.querySelector('.card');
-    card.innerHTML = "<h1>Cadastro realizado com sucesso, até mais!</h1>";
-    setTimeout(() => {
-        closeModal();
-    }, 3000);
-}
 
 

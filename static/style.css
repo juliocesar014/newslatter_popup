@@ -196,3 +196,23 @@ i {
         opacity: 0;
     }
 }
+
+/* Página sucess */
+
+
+#h1sucess {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    font-size: 1.2rem;
+}
