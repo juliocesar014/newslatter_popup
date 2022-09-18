@@ -14,6 +14,5 @@
 ### Linguagens usadas:
 #### -> Html - CSS - JavaScript - Python(Flask)
 
-### Tarefas pendentes:
-### -> Remover bug de enviar o email,
+### ?
 
