@@ -14,9 +14,6 @@
 ### Linguagens usadas:
 #### -> Html - CSS - JavaScript - Python(Flask)
 
-<<<<<<< HEAD
-### ?
-=======
+### Teste commit
 
->>>>>>> 837941b23e4ecef4886f9453148d5687b0df8e15
 
